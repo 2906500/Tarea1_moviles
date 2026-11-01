@@ -3,7 +3,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.tarea1"
+    namespace = "com.example.navigation"
     compileSdk {
         version = release(37)
     }
@@ -43,6 +43,7 @@ dependencies {
     implementation(libs.androidx.core.ktx)
     implementation("androidx.navigation:navigation-fragment-ktx:2.10.2")
     implementation("androidx.navigation:navigation-ui-ktx:2.10.2")
+    implementation(libs.androidx.fragment)
     implementation(libs.material)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.espresso.core)

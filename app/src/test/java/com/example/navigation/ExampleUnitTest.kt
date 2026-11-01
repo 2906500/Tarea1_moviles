@@ -1,4 +1,4 @@
-package com.example.tarea1
+package com.example.navigation
 
 import org.junit.Test
 
