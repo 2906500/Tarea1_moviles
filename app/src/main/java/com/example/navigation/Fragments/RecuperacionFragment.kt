@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.navigation.databinding.FragmentRecuperacionBinding
 
 class RecuperacionFragment : Fragment() {
@@ -31,12 +32,12 @@ class RecuperacionFragment : Fragment() {
                 Toast.makeText(requireContext(), "Introduce un correo válido", Toast.LENGTH_SHORT).show()
             } else {
                 Toast.makeText(requireContext(), "Instrucciones enviadas a $email", Toast.LENGTH_LONG).show()
-                parentFragmentManager.popBackStack()
+                findNavController().popBackStack()
             }
         }
 
         binding.VolverLoginDesdeRecuperacion.setOnClickListener {
-            parentFragmentManager.popBackStack()
+            findNavController().popBackStack()
         }
     }
 

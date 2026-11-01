@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.example.navigation.databinding.FragmentRegistroBinding
 
 class RegistroFragment : Fragment() {
@@ -33,12 +34,12 @@ class RegistroFragment : Fragment() {
                 Toast.makeText(requireContext(), "Por favor, rellena todos los campos", Toast.LENGTH_SHORT).show()
             } else {
                 Toast.makeText(requireContext(), "Usuario registrado correctamente", Toast.LENGTH_SHORT).show()
-                parentFragmentManager.popBackStack()
+                findNavController().popBackStack()
             }
         }
 
         binding.VolverLogin.setOnClickListener {
-            parentFragmentManager.popBackStack()
+            findNavController().popBackStack()
         }
     }
 

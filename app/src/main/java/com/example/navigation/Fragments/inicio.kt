@@ -5,8 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.navigation.R
+import androidx.navigation.fragment.findNavController
 import com.example.navigation.databinding.FragmentInicioBinding
+import com.example.navigation.R
 
 class inicio : Fragment() {
 
@@ -25,9 +26,7 @@ class inicio : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.btnEmpezar.setOnClickListener {
-            parentFragmentManager.beginTransaction()
-                .replace(R.id.fragmentContainer, LoginFragment())
-                .commit()
+            findNavController().navigate(R.id.action_inicio_to_login)
         }
     }
 
