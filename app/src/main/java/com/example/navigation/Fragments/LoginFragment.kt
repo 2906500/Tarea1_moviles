@@ -34,7 +34,6 @@ class LoginFragment : Fragment() {
                 Toast.makeText(requireContext(), "Rellena todos los campos", Toast.LENGTH_SHORT).show()
             } else {
                 Toast.makeText(requireContext(), "Bienvenido", Toast.LENGTH_SHORT).show()
-                // Aquí iría la lógica real de login
             }
         }
 
