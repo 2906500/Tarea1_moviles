@@ -11,17 +11,13 @@ data class EstadoLogin(
     val emailValido: Boolean = false,
     val passwordValida: Boolean = false
 ) {
-
     val loginActivo: Boolean
         get() = emailValido && passwordValida
 }
 
 class LoginViewModel : ViewModel() {
 
-
     private val _estado = MutableStateFlow(EstadoLogin())
-
-
     val estado: StateFlow<EstadoLogin> = _estado.asStateFlow()
 
     fun cambiarEmail(email: String) {
